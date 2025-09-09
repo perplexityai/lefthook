@@ -1,6 +1,6 @@
 {
   "name": "lefthook",
-  "version": "1.12.4",
+  "version": "1.12.5-pplx",
   "description": "Simple git hooks manager",
   "repository": {
     "type": "git",
@@ -28,16 +28,16 @@
   },
   "homepage": "https://github.com/evilmartians/lefthook#readme",
   "optionalDependencies": {
-    "lefthook-darwin-arm64": "1.12.4",
-    "lefthook-darwin-x64": "1.12.4",
-    "lefthook-linux-arm64": "1.12.4",
-    "lefthook-linux-x64": "1.12.4",
-    "lefthook-freebsd-arm64": "1.12.4",
-    "lefthook-freebsd-x64": "1.12.4",
-    "lefthook-openbsd-arm64": "1.12.4",
-    "lefthook-openbsd-x64": "1.12.4",
-    "lefthook-windows-arm64": "1.12.4",
-    "lefthook-windows-x64": "1.12.4"
+    "lefthook-darwin-arm64": "1.12.5-pplx",
+    "lefthook-darwin-x64": "1.12.5-pplx",
+    "lefthook-linux-arm64": "1.12.5-pplx",
+    "lefthook-linux-x64": "1.12.5-pplx",
+    "lefthook-freebsd-arm64": "1.12.5-pplx",
+    "lefthook-freebsd-x64": "1.12.5-pplx",
+    "lefthook-openbsd-arm64": "1.12.5-pplx",
+    "lefthook-openbsd-x64": "1.12.5-pplx",
+    "lefthook-windows-arm64": "1.12.5-pplx",
+    "lefthook-windows-x64": "1.12.5-pplx"
   },
   "scripts": {
     "postinstall": "node postinstall.js"
