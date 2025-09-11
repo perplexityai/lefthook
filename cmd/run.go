@@ -79,6 +79,11 @@ func (run) New(opts *command.Options) *cobra.Command {
 	)
 
 	runCmd.Flags().BoolVar(
+		&runArgs.NoStageFixes, "no-stage-fixes", false,
+		"skip staging changes",
+	)
+
+	runCmd.Flags().BoolVar(
 		&runArgs.SkipLFS, "skip-lfs", false,
 		"skip running git lfs",
 	)

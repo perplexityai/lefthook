@@ -44,6 +44,7 @@ type Options struct {
 	Force           bool
 	Exclude         []string
 	Files           []string
+	NoStageFixes    bool
 	RunOnlyCommands []string
 	RunOnlyJobs     []string
 	RunOnlyTags     []string
@@ -211,7 +212,7 @@ func (r *Run) runLFSHook(ctx context.Context) error {
 }
 
 func (r *Run) preHook() {
-	if !config.HookUsesStagedFiles(r.HookName) {
+	if r.NoStageFixes || !config.HookUsesStagedFiles(r.HookName) {
 		return
 	}
 
@@ -399,7 +400,7 @@ func (r *Run) runScript(ctx context.Context, script *config.Script, file os.File
 
 	result := result.Success(file.Name(), executionTime)
 
-	if config.HookUsesStagedFiles(r.HookName) && script.StageFixed {
+	if config.HookUsesStagedFiles(r.HookName) && !r.NoStageFixes && script.StageFixed {
 		files, err := r.Repo.StagedFiles()
 		if err != nil {
 			log.Warn("Couldn't stage fixed files:", err)
@@ -550,7 +551,7 @@ func (r *Run) runCommand(ctx context.Context, name string, command *config.Comma
 
 	result := result.Success(name, executionTime)
 
-	if config.HookUsesStagedFiles(r.HookName) && command.StageFixed {
+	if config.HookUsesStagedFiles(r.HookName) && !r.NoStageFixes && command.StageFixed {
 		files := job.Files
 
 		if len(files) == 0 {
