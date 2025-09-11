@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-const version = "1.12.4"
+const version = "1.12.5-pplx-b"
 
 var (
 	// Is set via -X github.com/evilmartians/lefthook/internal/version.commit={commit}.
