@@ -220,7 +220,7 @@ func (r *Run) runSingleJob(ctx context.Context, jobContext *jobContext, id strin
 		return result.Failure(name, job.FailText, executionTime)
 	}
 
-	if config.HookUsesStagedFiles(r.HookName) && job.StageFixed {
+	if config.HookUsesStagedFiles(r.HookName) && !r.NoStageFixed && job.StageFixed {
 		files := executionJob.Files
 
 		if len(files) == 0 {
