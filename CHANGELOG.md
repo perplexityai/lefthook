@@ -98,7 +98,7 @@
 
 ## 1.11.6 (2025-03-31)
 
-- fix: print git errors  ([#984](https://github.com/evilmartians/lefthook/pull/984)) by [@mrexox](https://github.com/mrexox)
+- fix: print git errors ([#984](https://github.com/evilmartians/lefthook/pull/984)) by [@mrexox](https://github.com/mrexox)
 - packaging: maintain lefthook-bin AUR package ([#982](https://github.com/evilmartians/lefthook/pull/982)) by [@mrexox](https://github.com/mrexox)
 - chore: fancier logging ([#983](https://github.com/evilmartians/lefthook/pull/983)) by [@mrexox](https://github.com/mrexox)
 - docs: remove a note about the difference for unix-like and windows by [@mrexox](https://github.com/mrexox)
@@ -179,6 +179,7 @@
 - feat: run --jobs completion ([#913](https://github.com/evilmartians/lefthook/pull/913)) by [@scop](https://github.com/scop)
 - ci: add gzipped linux aarch64 binary to release artifacts ([#908](https://github.com/evilmartians/lefthook/pull/908)) by [@mrexox](https://github.com/mrexox)
 -
+
 ## 1.10.1 (2024-12-26)
 
 - feat: add ability to specify job names for command run ([#904](https://github.com/evilmartians/lefthook/pull/904)) by [@mrexox](https://github.com/mrexox)
@@ -538,7 +539,7 @@ Fix lefthook NPM package to include OpenBSD package as optional dependency.
 ## 1.4.8 (2023-07-31)
 
 - feat: add assert_lefthook_installed option ([#533](https://github.com/evilmartians/lefthook/pull/533)) by [@mrexox](https://github.com/mrexox)
-- chore: add *Add docs* to PR template ([#532](https://github.com/evilmartians/lefthook/pull/532)) by [@technicalpickles](https://github.com/technicalpickles)
+- chore: add _Add docs_ to PR template ([#532](https://github.com/evilmartians/lefthook/pull/532)) by [@technicalpickles](https://github.com/technicalpickles)
 - feat: add support for skipping empty summaries ([#531](https://github.com/evilmartians/lefthook/pull/531)) by [@technicalpickles](https://github.com/technicalpickles)
 
 ## 1.4.7 (2023-07-24)
@@ -841,12 +842,12 @@ Fix lefthook NPM package to include OpenBSD package as optional dependency.
 # 0.6.7 (2019-12-14)
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/e898b5c8ba56c4d6f29a4d1f433baa1779a0845b)
-Skip before executing command
+  Skip before executing command
 
 - [PR](https://github.com/evilmartians/lefthook/pull/94) Add option --keep-config. Thanks [@justinasposiunas](https://github.com/justinasposiunas)
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/d79a3a46e7d1ee709b97e97f823bfd27e9466eff)
-Check if shell is non interactive
+  Check if shell is non interactive
 
 # 0.6.6 (2019-12-03)
 
@@ -857,10 +858,10 @@ Check if shell is non interactive
 - [PR](https://github.com/evilmartians/lefthook/pull/89) Add support for git-worktree. Thanks [@f440](https://github.com/f440)
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/48702a0806d2b2eab13636ba56b0e0b99f346f1c)
-Commands and Scripts now can catch Stdin
+  Commands and Scripts now can catch Stdin
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/9a226842292ff1dda0f2273b66a0799988aa5289)
-Add partial support for monorepos and command execution not from project root
+  Add partial support for monorepos and command execution not from project root
 
 # 0.6.4 (2019-11-08)
 
@@ -871,17 +872,19 @@ Add partial support for monorepos and command execution not from project root
 - [PR](https://github.com/evilmartians/lefthook/pull/82) Now relative path to scripts supported. Thanks [@AlexeyMatskevich](https://github.com/AlexeyMatskevich)
 
 - [Commit](https://github.com/evilmartians/lefthook/pull/80/commits/1a4b0ee155eb66ae6f3c365164012bee9332605a)
-Option `extends` for top level config added. Now you can merge some settings from different places:
+  Option `extends` for top level config added. Now you can merge some settings from different places:
+
 ```yml
 extends: $HOME/work/lefthook-extend.yml
 ```
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/83cf818106dbf222ea33ba86aafce8f30d7cb5a9)
-Add examples to generated lefthook.yml
+  Add examples to generated lefthook.yml
 
 ## 0.6.3 (2019-07-15)
 
 - [Commit](https://github.com/evilmartians/lefthook/commit/0426936f48f248221126f15619932b0dc8c54d7a) Add `-a` means `aggressive` strategy for `install` command
+
 ```bash
 lefthook install -a # clear .git/hooks dir and reinstall lefthook hooks
 ```
@@ -912,7 +915,9 @@ pre-commit:
     rubocop:
       run: rubocop {push_files}
 ```
+
 It same as:
+
 ```
 pre-commit:
   commands:
@@ -924,6 +929,7 @@ pre-commit:
 - [Commit](https://github.com/evilmartians/lefthook/commit/af087b032a14952aa1dd235a3d0b5a51bc760a10) Add `min_version` option
 
 You can mark your config for minimum Lefthook version:
+
 ```
 min_version: 0.6.1
 ```
@@ -940,7 +946,9 @@ pre-commit:
     bashed:
       run: rubocop -a && git add
 ```
+
 Will be executed in this way:
+
 ```
 sh -c "rubocop -a && git add"
 ```
